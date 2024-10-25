@@ -1,0 +1,234 @@
+:root {
+    --main-bg-color: #eee;
+    --control-bg-color: #f0f0f0;
+    --control-text-color: #333;
+    --control-border-color: #ccc;
+    --control-hover-border-color: #888;
+    --slider-thumb-color: #4CAF50;
+    --slider-thumb-hover-color: #45a049;
+    --slider-thumb-active-color: #388e3c;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.imcontainer {
+    width: 50%;
+    height: 500px;
+    position: relative;
+    margin: auto;
+}
+
+svg, .img-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.svg-1 {
+    z-index: 0;
+    fill: red;
+}
+.ancol {
+    position: absolute;
+    top: 94%;
+    left: 39%;
+    width: 20%;
+    height: 3%;
+    z-index: 10000000;
+}
+
+
+
+
+
+
+.svg-3 {
+    z-index: 4;
+    fill: green;
+}
+
+.img-1 {
+    z-index: 6;
+    top: 1%;
+}
+
+.svg-2 {
+    z-index: 9;
+    fill: blue;
+    top: 6%;
+}
+
+.incontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--control-bg-color);
+    border-radius: 10px;
+    width: 12%;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.choseC {
+    -webkit-appearance: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.choseC:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.choseC:active {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Canvas container for the logo */
+#canvas-container {
+    width: 30%;
+    height: 45%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 900;
+    top: 73%;
+    left: 35%;
+    transform: translateY(-50%);
+}
+
+#logo {
+    position: absolute;
+    cursor: grab;
+    transform-origin: center center;
+    width: 150px;
+    display: none;
+}
+
+#logo:active {
+    cursor: grabbing;
+}
+
+#controls {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+#controls label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--control-text-color);
+    font-weight: bold;
+}
+
+#controls input[type="file"] {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    width: 100%;
+    padding: 6px;
+    border: 1px solid var(--control-border-color);
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#controls input[type="file"]:hover {
+    border-color: var(--control-hover-border-color);
+}
+
+#controls input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    appearance: none;
+    height: 6px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+#controls input[type="range"]::-webkit-slider-thumb,
+#controls input[type="range"]::-moz-range-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: var(--slider-thumb-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#controls input[type="range"]:hover::-webkit-slider-thumb,
+#controls input[type="range"]:hover::-moz-range-thumb {
+    background-color: var(--slider-thumb-hover-color);
+}
+
+#controls input[type="range"]:active::-webkit-slider-thumb,
+#controls input[type="range"]:active::-moz-range-thumb {
+    background-color: var(--slider-thumb-active-color);
+}
+
+
+
+@media only screen and (min-width: 901px) {
+    .gg {
+        /* background-color: #da1717; */
+        width: 27.1%;
+        height: 15%;
+        position: absolute;
+        z-index: 1;
+        top: 44%;
+        border-top-left-radius: 235%;
+        border-top-right-radius: 135%;
+        left: 39%;
+        background: transparent;
+        box-shadow: -16px -33px 12px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .gg {
+        /* background-color: #da1717; */
+        width: 34.1%;
+        height: 15%;
+        position: absolute;
+        z-index: 1;
+        top: 44%;
+        border-top-left-radius: 235%;
+        border-top-right-radius: 135%;
+        left: 36%;
+        background: transparent;
+        box-shadow: -16px -33px 12px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
